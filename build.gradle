@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.checkerframework' version "0.6.5"
+}
+
+group 'org.dockbox'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.projectlombok:lombok:1.18.22"
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.22"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
